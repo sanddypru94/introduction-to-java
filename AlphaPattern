@@ -1,5 +1,3 @@
-package lecture_5_pattern;
-
 import java.util.Scanner;
 
 public class AlphaPattern {
