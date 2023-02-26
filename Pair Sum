@@ -1,0 +1,21 @@
+
+
+public class Solution {	
+
+	public static int pairSum(int[] arr, int num) {
+		//Your code goes here
+        int n,c=0,i,j;
+        n=arr.length;
+        for(i=0;i<n;i++)
+        {
+            for(j=i+1;j<n;j++)
+            {
+                if(arr[i]+arr[j]==num)
+                {
+                    c=c+1;
+                }
+            }
+        }
+        return c;
+	}
+}
