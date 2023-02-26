@@ -1,0 +1,46 @@
+
+// public class Solution {
+
+// 	public static String reverseEachWord(String str) {
+// 	String ans="";
+// 	        int count=0;
+// 	        ans=ans+str.charAt(0);
+// 	     for(int i=1;i<str.length();i++){
+// 	         if(str.charAt(i)!=str.charAt(i-1)){
+// 	             ans=ans+str.charAt(i);
+// 	         }
+// 	     }
+// 	     return ans;
+// 		}
+	
+// }
+
+
+public class Solution {
+	
+	public static String reverseEachWord(String str) {
+        
+        int n=str.length();
+        int p=-1;
+        String ans="";
+        int i=0;
+        for(;i<n;i++){
+            if(str.charAt(i)==' '){
+                ans+=func(str,p+1,i)+" ";
+                p=i;
+            }
+        }
+        ans+=func(str,p+1,i)+" ";
+        return ans;
+	}
+    
+    static String func(String str,int s,int e){
+        String ans="";
+        while(s<e){
+            ans=str.charAt(s)+ans;
+            s++;
+        }
+        return ans;
+    }
+
+}
